@@ -1,25 +1,24 @@
-const _ = require("lodash");
-
 exports.cardValidator = num => {
-  let cardReverse = num.split("").reverse().join("");
-  let timesArray = [];
-  let sumArray = [];
-
-  if (num === "" || num.match(/[a-zA-Z]/)) {
-    alert("Você precisa digitar um número.");
+  if (num == null) {
+    throw new Error("Erro: parâmetro vazio.");
   } 
 
-  for (let i = 0; i < cardReverse.length; i++) { 
-    i % 2 !== 0 ? timesArray.push(parseInt(cardReverse[i] * 2)) : timesArray.push(parseInt(cardReverse[i]));
+  if (typeof num !== "number") {
+    throw new Error("Erro: precisa digitar números.");
   }
 
-  for (let digit of timesArray) {
-    digit >= 10 && digit <= 18 ? sumArray.push(digit - 9) : sumArray.push(digit);
+  if (num.toString().length === 1) {
+    throw new Error("Erro: precisa digitar um número válido.");  
   }
   
-  let result = sumArray.reduce((a, b) => a + b);
+  let cardReverse = num.toString().split("").reverse().map(Number);
+
+  cardReverse.map((element, index) => {
+    index % 2 !== 0 ? element * 2 : element;
+    element >= 10 && element <= 18 ? element - 9 : element;
+  });
+
+  let result = cardReverse.reduce((acum, num) => acum + num);
 
   return result % 10 === 0 ? true : false;
-}
-
-cardValidator("5234210238826905");
+};
