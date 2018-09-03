@@ -11,14 +11,14 @@ exports.cardValidator = num => {
     throw new Error("Erro: precisa digitar um número válido.");  
   }
   
-  let cardReverse = num.toString().split("").reverse().map(Number);
+  const cardReverse = num.toString().split("").reverse().map(Number);
 
-  cardReverse.map((element, index) => {
-    index % 2 !== 0 ? element * 2 : element;
-    element >= 10 && element <= 18 ? element - 9 : element;
+  const operationsHandler = cardReverse.map((element, index) => {
+    const timesTwo = index % 2 !== 0 ? element * 2 : element;
+    return timesTwo >= 10 && timesTwo <= 18 ? timesTwo - 9 : timesTwo;
   });
 
-  let result = cardReverse.reduce((acum, num) => acum + num);
+  const result = operationsHandler.reduce((acum, num) => acum + num);
 
   return result % 10 === 0 ? true : false;
 };

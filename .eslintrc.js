@@ -1,6 +1,6 @@
 module.exports = {
     "env": {
-        "browser": true
+        "browser": true,
         "commonjs": true,
         "es6": true
     },
@@ -16,7 +16,7 @@ module.exports = {
         ],
         "linebreak-style": [
             "error",
-            "unix"
+            "windows"
         ],
         "quotes": [
             "error",
