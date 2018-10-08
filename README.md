@@ -18,9 +18,6 @@ $ node
 > //true
 ```
 
-## Appearance
-![App map](./images/card-validator.png)
-
 ## Technology Stack
 + HTML5
 + CSS3
