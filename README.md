@@ -1,16 +1,16 @@
 # Credit Card Validator 
-Biblioteca destinada a validar números de cartões de crédito através do algoritmo de Luhn
+A library designed to validate credit cards using Luhn's algorithm.
 
-## Instalação
-+ Requer Node.js, NPM e Lodash. Caso não possua, acesse: 
+## Installation
++ Requires Node.js, NPM and Lodash. If you do not have it, go to:
 	1. [Node + NPM](https://nodejs.org/en/download/);
 	2. [Lodash](https://lodash.com/);
-+ Utilize o terminal e insira, de preferência na pasta onde quer utilizar a biblioteca:
++ In the terminal, go to the folder where you want to use the library and then type:
 ```
 $ npm install dc-card-validator-lib
 ```
 
-## Uso
+## Use
 ```
 $ node
 > const library = require("dc-card-validator-lib")
@@ -18,15 +18,27 @@ $ node
 > //true
 ```
 
-## Roadmap oficial
+## Appearance
+![App map](./images/card-validator.png)
 
-#### versão 3.0.0 (prevista para dezembro/2018)
-+ Implementação de validação mais abrangente, incluindo o código verificador e a validade
-+ Transcrição do README para inglês e espanhol
+## Technology Stack
++ HTML5
++ CSS3
++ JavaScript 
++ NPM
++ Mocha
++ Chai
++ NYC
++ Lodash
 
-#### versão 2.0.0 (prevista para novembro/2018)
-+ Implementação de identificações das principais bandeiras (Visa, MasterCard, Diners, Elo e Hipercard), que possuem configurações diversas, entre 13 e 16 dígitos
+## Oficial Roadmap
 
-#### versão 1.0.0 (released)
-+ Verifica se um número de cartão de crédito é válido ou não, retornando *true* ou *false*
+#### versão 3.0.0 (scheduled for January 2019)
++ Implementation of more comprehensive validation, including verifier code and validity.
+
+#### version 2.0.0 (scheduled for November 2018)
++ Identification of the main flags (Visa, MasterCard, Diners, Elo and Hipercard), which have different configurations, between 13 and 16 digits.
+
+#### version 1.0.0 (released)
++ Verifies IF a credit card is valid or not, returning **true** or **false**.
 
